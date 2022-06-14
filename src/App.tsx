@@ -1,6 +1,6 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { AppFooter } from "./cmps/AppFooter";
-import { AppHeader } from "./cmps/AppHeader";
+import { MainHeader } from "./cmps/MainHeader";
 import { About } from "./pages/About";
 import { Home } from "./pages/Home";
 import { StayDetails } from "./pages/StayDetails";
@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <section className="app-root">
-        <AppHeader />
+        <MainHeader />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

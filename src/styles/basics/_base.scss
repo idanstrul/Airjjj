@@ -5,15 +5,83 @@
 }
 
 html {
-    font-family: sans-serif;
     // It's better not to touch the default text size
     // from here in order to save a clear ratio for
     // to use in all other places. In this way we
     // remmember that the rem unit is 16px.
     // If we want to change the default font size we
     // can do it from the body.
+
+    // font-size: 80px;
+    // font-family: cereal-w-blk;
+    // font-family: cereal-w-xbd;
+    // font-family: cereal-w-bd;
+    // font-family: cereal-w-md;
+    // font-family: cereal-w-bk;
+    // font-family: cereal-w-lt;
+
+    font-family: $font-family-default;
+    color: $font-clr-primary;
 }
 
 img {
     max-width: 100%;
+}
+
+button,
+a {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    text-decoration: none;
+
+    .main-header & {
+        font-weight: 600;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        // margin: 0;
+        // padding: 0;
+        // text-align: inherit;
+        padding: 12px;
+        border-radius: 22px;
+
+        &:hover {
+            background-color: $background-clr-secondary;
+        }
+
+        &.intl-btn {
+            .container {
+                height: 18px;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    &.burger-menu-btn {
+        display: flex;
+        align-items: center;
+        padding: 5px 5px 5px 12px;
+        // background: transparent;
+        // border: 0;
+        cursor: pointer;
+        // margin: 0;
+        // padding: 0;
+        // text-align: inherit;
+        background-color: $background-clr-default;
+        border: 1px solid $border-clr-default;
+        border-radius: 21px;
+        transition: box-shadow 0.2s ease;
+
+        width: 77px;
+        height: 42px;
+
+        .container {
+            width: 30px;
+            height: 30px;
+            margin-inline-start: 12px;
+            color: $font-clr-light;
+        }
+    }
 }

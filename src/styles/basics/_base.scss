@@ -28,14 +28,31 @@ img {
     max-width: 100%;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    color: $brand-clr;
+    text-transform: lowercase;
+    font-family: LL-Brown, sans-serif;
+    font-size: 25px;
+    gap: 6.29px;
+    letter-spacing: -2px;
+
+    span {
+        height: 32px;
+        line-height: 28px;
+    }
+}
+
 button,
 a {
     color: inherit;
     font-family: inherit;
     font-size: inherit;
     text-decoration: none;
+    cursor: pointer;
 
-    .main-header & {
+    .main-header > div.controls &:not(.burger-menu-btn) {
         font-weight: 600;
         background: transparent;
         border: 0;
@@ -45,9 +62,28 @@ a {
         // text-align: inherit;
         padding: 12px;
         border-radius: 22px;
+        position: relative;
+        // z-index: 1;
+
+        & .container {
+            position: relative;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: -3px;
+            right: -3px;
+            // z-index: 0;
+            border-radius: 22px;
+        }
 
         &:hover {
-            background-color: $background-clr-secondary;
+            &::before {
+                background-color: $background-clr-secondary;
+            }
         }
 
         &.intl-btn {
@@ -77,11 +113,19 @@ a {
         width: 77px;
         height: 42px;
 
+        &:hover {
+            box-shadow: $box-shadow-default;
+        }
+
         .container {
             width: 30px;
             height: 30px;
             margin-inline-start: 12px;
             color: $font-clr-light;
+        }
+
+        .main-header > div.controls & {
+            margin-inline-start: 8px;
         }
     }
 }

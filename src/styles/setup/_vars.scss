@@ -1,4 +1,6 @@
 // COLORS:
+$brand-clr: #ff385c;
+
 $font-clr-primary: #222222;
 $font-clr-secondary: #484848;
 $font-clr-light: #717171;
@@ -11,19 +13,9 @@ $font-weight-default: 400;
 $font-weight-bold: 600;
 
 $font-family-default: Cereal, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+// $font-family-for-bold: Cereal-lt, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
 
-//exemple - remove:
-$clr-intro-email-su-bg: hsl(217, 28%, 15%);
-$clr-main-bg: hsl(218, 28%, 13%);
-$clr-footer-bg: hsl(216, 53%, 9%);
-$clr-testimonials-bg: hsl(219, 30%, 18%);
-
-$clr-cta-gradient1: #65e2d9;
-$clr-cta-gradient2: hsl(198, 60%, 50%);
-
-$clr-link-main: #62e0d9;
-
-$clr-neutral: hsl(0, 0%, 100%);
+$box-shadow-default: 0 2px 4px rgba(0, 0, 0, 0.18);
 
 // VIEW BREAK POINTS:
 //exemple-remove:

@@ -1,26 +1,20 @@
 @font-face {
     font-family: Cereal;
-    src: url("../../assets/fonts/AirbnbCereal_W_Bk.otf");
-    font-weight: 400;
+    src: url("../../assets/fonts/AirbnbCereal_W_Lt.otf");
 }
 
+// @font-face {
+//     font-family: Cereal-lt;
+//     src: url("../../assets/fonts/AirbnbCereal_W_Lt.otf");
+// }
+
 @font-face {
-    font-family: Cereal;
-    src: url("../../assets/fonts/AirbnbCereal_W_Md.otf");
-    font-weight: 600;
+    font-family: LL-Brown;
+    src: url("../../assets/fonts/ll-brown/Brown-BoldAlt.ttf");
+    // font-synthesis: weight;
 }
 
 //// All types of the AirBnB cereal font:
-
-@font-face {
-    font-family: Cereal-w-bd;
-    src: url("../../assets/fonts/AirbnbCereal_W_Bd.otf");
-}
-
-@font-face {
-    font-family: Cereal-w-bk;
-    src: url("../../assets/fonts/AirbnbCereal_W_Bk.otf");
-}
 
 @font-face {
     font-family: Cereal-w-blk;
@@ -28,8 +22,13 @@
 }
 
 @font-face {
-    font-family: Cereal-w-lt;
-    src: url("../../assets/fonts/AirbnbCereal_W_Lt.otf");
+    font-family: Cereal-w-xbd;
+    src: url("../../assets/fonts/AirbnbCereal_W_XBd.otf");
+}
+
+@font-face {
+    font-family: Cereal-w-bd;
+    src: url("../../assets/fonts/AirbnbCereal_W_Bd.otf");
 }
 
 @font-face {
@@ -38,6 +37,11 @@
 }
 
 @font-face {
-    font-family: Cereal-w-xbd;
-    src: url("../../assets/fonts/AirbnbCereal_W_XBd.otf");
+    font-family: Cereal-w-bk;
+    src: url("../../assets/fonts/AirbnbCereal_W_Bk.otf");
+}
+
+@font-face {
+    font-family: Cereal-w-lt;
+    src: url("../../assets/fonts/AirbnbCereal_W_Lt.otf");
 }

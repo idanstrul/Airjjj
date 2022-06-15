@@ -3,16 +3,22 @@ import { StaysFilter } from "./StaysFilter";
 import { ReactComponent as IntlGlobeSVG } from "../assets/airbnb.icons/intl-globe.svg";
 import { ReactComponent as BurgerMenuSVG } from "../assets/airbnb.icons/burger-menu.svg";
 import { ReactComponent as UserAvatarDefaultSVG } from "../assets/airbnb.icons/user-avatar-default.svg";
+import { ReactComponent as LogoIconSvg } from "../assets/airbnb.icons/cdnlogo.com_airbnb.svg";
 
 export function MainHeader() {
   return (
-    <header className="main-header main-layout flex text-s">
-      <div className="logo flex-grow"></div>
+    <header className="main-header main-layout flex align-center text-s">
+      <div className="logo flex-grow">
+        <LogoIconSvg />
+        <span>Airjjj</span>
+      </div>
 
       <StaysFilter />
 
-      <div className="container flex-grow flex justify-flex-end">
-        <NavLink to="#">Become a Host</NavLink>
+      <div className="controls flex-grow flex justify-flex-end">
+        <NavLink to="#">
+          <div className="container"> Become a Host</div>
+        </NavLink>
         <button className="intl-btn">
           <div className="container">
             <IntlGlobeSVG />

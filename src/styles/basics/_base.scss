@@ -128,4 +128,19 @@ a {
             margin-inline-start: 8px;
         }
     }
+
+    .category-chip & {
+        background-color: unset;
+        border: unset;
+        padding: 4px 0 14px;
+        margin: 12px 0 0;
+        transition: box-shadow 0.2s ease, color 0.2s ease;
+        color: $font-clr-light;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        min-width: 56px;
+        align-items: center;
+    }
 }

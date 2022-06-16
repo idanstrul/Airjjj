@@ -8,14 +8,14 @@ import { ReactComponent as LogoIconSvg } from "../assets/airbnb.icons/cdnlogo.co
 export function MainHeader() {
   return (
     <header className="main-header main-layout flex align-center text-s">
-      <div className="logo flex-grow">
+      <div className="logo">
         <LogoIconSvg />
         <span>Airjjj</span>
       </div>
 
       <StaysFilter />
 
-      <div className="controls flex-grow flex justify-flex-end">
+      <div className="controls flex justify-flex-end">
         <NavLink to="#">
           <div className="container"> Become a Host</div>
         </NavLink>

@@ -18,6 +18,10 @@
         }
     }
 
+    .category-list &:first-child button {
+        min-width: 38.8px;
+    }
+
     div.category-name {
         position: relative;
 

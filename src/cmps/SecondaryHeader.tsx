@@ -1,4 +1,7 @@
 import { CategoryChip } from "./CategoryChip";
+import { CategoryFilterBtn } from "./CategoryFilterBtn";
+import { ArrowNavBtn } from "./ArrowNavBtn";
+import { useState } from "react";
 
 export function SecondaryHeader() {
   const categories = [
@@ -53,18 +56,56 @@ export function SecondaryHeader() {
     "Containers",
     "Grand pianos",
     "Creative spaces",
-    "Trulli",
     "Riads",
+    "Trulli",
     "Dammusos",
     "Lake",
   ];
 
+  const [isPrevBtnVisible, setIsPrevBtnVisible] = useState(false);
+  const [isNextBtnVisible, setIsNextBtnVisible] = useState(true);
+
+  const handleScroll = (el: HTMLElement) => {
+    // console.log(el.scrollLeft);
+    if (el.scrollLeft >= 9) {
+      setIsPrevBtnVisible(true);
+    } else {
+      setIsPrevBtnVisible(false);
+    }
+    if (el.scrollLeft >= el.scrollWidth - el.clientWidth - 12) {
+      setIsNextBtnVisible(false);
+    } else {
+      setIsNextBtnVisible(true);
+    }
+  };
+
   return (
     <header className="secondary-header main-layout">
-      <div className="category-list">
-        {categories.map((c) => (
-          <CategoryChip category={c} key={c} />
-        ))}
+      <div className="category-controls flex">
+        <div className="category-nav-bar position-relative">
+          <div
+            className="category-nav-btn"
+            style={{ opacity: isPrevBtnVisible ? 1 : 0 }}
+          >
+            <ArrowNavBtn dir="left" />
+          </div>
+          <div
+            className="category-list"
+            onScroll={(ev) => handleScroll(ev.target as HTMLElement)}
+          >
+            {categories.map((c) => (
+              <CategoryChip category={c} key={c} />
+            ))}
+          </div>
+          <div
+            className="category-nav-btn"
+            style={{ opacity: isNextBtnVisible ? 1 : 0 }}
+          >
+            <ArrowNavBtn dir="right" />
+          </div>
+        </div>
+
+        <CategoryFilterBtn />
       </div>
     </header>
   );

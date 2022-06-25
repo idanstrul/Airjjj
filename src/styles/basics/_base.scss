@@ -143,4 +143,19 @@ a {
         min-width: 56px;
         align-items: center;
     }
+
+    &.arrow-nav-btn {
+        border-radius: 50%;
+        padding: 7px;
+        border: 1px solid rgb(0 0 0 / 0.3);
+        background-color: $background-clr-default;
+        transition: box-shadow 0.2s ease;
+        outline: 0;
+        touch-action: manipulation;
+
+        &:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+            transform: scale(1.04);
+        }
+    }
 }

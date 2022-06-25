@@ -26,6 +26,24 @@
     }
 }
 
+.position- {
+    &relative {
+        position: relative;
+    }
+
+    &fixed {
+        position: fixed;
+    }
+
+    &absolute {
+        position: absolute;
+    }
+}
+
+.width-100pr {
+    width: 100%;
+}
+
 .clean-list {
     list-style: none;
     padding: 0;

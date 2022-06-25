@@ -1,4 +1,78 @@
 .secondary-header {
     height: 98px;
     padding-top: 20px;
+
+    .category-nav-bar {
+        min-width: 0;
+
+        .category-list {
+            margin-inline-end: 20px;
+        }
+
+        .category-nav-btn {
+            position: absolute;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            z-index: 10;
+            background-color: $background-clr-default;
+            top: 0;
+            bottom: 0;
+            inset-inline-start: 0;
+            transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+            transition-timing-function: ease;
+
+            &:last-child {
+                inset-inline-end: -12px;
+                inset-inline-start: auto;
+                padding-inline-end: 8px;
+
+                &::after {
+                    right: 100%;
+                    left: auto;
+                    background-image: linear-gradient(to left, white, rgb(255 255 255 / 0));
+                }
+            }
+
+            &::after {
+                left: 100%;
+                background-image: linear-gradient(to right, white, rgb(255 255 255 / 0));
+                content: "";
+                display: block;
+                top: 0;
+                bottom: 0;
+                pointer-events: none;
+                position: absolute;
+                width: 40px;
+                z-index: -1;
+            }
+        }
+    }
+
+    .category-filter-btn {
+        display: flex;
+        align-items: center;
+
+        .container {
+            padding-inline-start: 24px;
+        }
+
+        button {
+            background: $background-clr-default;
+            border: 1px solid $border-clr-default;
+            border-radius: 12px;
+            padding: 7px 0;
+            min-width: 48px;
+            height: 48px;
+            font-weight: 600;
+
+            span {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding-inline-start: 16px;
+                padding-inline-end: 16px;
+            }
+        }
+    }
 }

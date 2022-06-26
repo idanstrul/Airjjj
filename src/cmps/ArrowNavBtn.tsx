@@ -1,9 +1,11 @@
 import { ReactComponent as NavArrowLeftSVG } from "../assets/airbnb.icons/nav-arrow-left.svg";
 import { ReactComponent as NavArrowRightSVG } from "../assets/airbnb.icons/nav-arrow-right.svg";
 
-export function ArrowNavBtn({ dir }: { dir: "left" | "right" }) {
+type Dir = 'left' | 'right'
+
+export function ArrowNavBtn({ dir, clickFunc }: { dir: Dir; clickFunc?: (dir: Dir) => void; }) {
   return (
-    <button className="arrow-nav-btn">
+    <button className="arrow-nav-btn" onClick={() => (clickFunc) ? clickFunc(dir) : null}>
       <span>{dir === "left" ? <NavArrowLeftSVG /> : <NavArrowRightSVG />}</span>
     </button>
   );

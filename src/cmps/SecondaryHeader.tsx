@@ -1,7 +1,7 @@
 import { CategoryChip } from "./CategoryChip";
 import { CategoryFilterBtn } from "./CategoryFilterBtn";
 import { ArrowNavBtn } from "./ArrowNavBtn";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export function SecondaryHeader() {
   const categories = [
@@ -64,6 +64,7 @@ export function SecondaryHeader() {
 
   const [isPrevBtnVisible, setIsPrevBtnVisible] = useState(false);
   const [isNextBtnVisible, setIsNextBtnVisible] = useState(true);
+  const categoryListRef = useRef(null);
 
   const handleScroll = (el: HTMLElement) => {
     // console.log(el.scrollLeft);
@@ -79,6 +80,15 @@ export function SecondaryHeader() {
     }
   };
 
+  const executeScroll = (dir: 'left' | 'right') => {
+    if (categoryListRef.current) {
+      const elCategoryList = categoryListRef.current as HTMLElement
+      const scrollAmount = elCategoryList.clientWidth * 0.7 * ((dir === 'left') ? -1 : 1)
+      elCategoryList.scrollBy(scrollAmount, 0)
+    }
+
+  }
+
   return (
     <header className="secondary-header main-layout">
       <div className="category-controls flex">
@@ -87,9 +97,10 @@ export function SecondaryHeader() {
             className="category-nav-btn"
             style={{ opacity: isPrevBtnVisible ? 1 : 0 }}
           >
-            <ArrowNavBtn dir="left" />
+            <ArrowNavBtn dir="left" clickFunc={executeScroll} />
           </div>
           <div
+            ref={categoryListRef}
             className="category-list"
             onScroll={(ev) => handleScroll(ev.target as HTMLElement)}
           >
@@ -101,7 +112,7 @@ export function SecondaryHeader() {
             className="category-nav-btn"
             style={{ opacity: isNextBtnVisible ? 1 : 0 }}
           >
-            <ArrowNavBtn dir="right" />
+            <ArrowNavBtn dir="right" clickFunc={executeScroll} />
           </div>
         </div>
 

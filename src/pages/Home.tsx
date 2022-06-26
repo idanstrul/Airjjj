@@ -1,9 +1,14 @@
 import { SecondaryHeader } from "../cmps/SecondaryHeader";
+import { MainFooterContainer } from "../cmps/MainFooterContainer";
+
 
 export function Home() {
   return (
-    <main className="home-page">
+    <>
       <SecondaryHeader />
-    </main>
+      <main className="home-page">
+      </main>
+      <MainFooterContainer />
+    </>
   );
 }

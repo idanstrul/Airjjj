@@ -158,4 +158,37 @@ a {
             transform: scale(1.04);
         }
     }
+
+    &.map-btn {
+        border-radius: 24px;
+        outline: none;
+        padding: 14px 19px;
+        touch-action: manipulation;
+        border-style: solid;
+        border-width: 1px;
+        transition: transform 0.25s ease;
+        background: $font-clr-primary;
+        color: $background-clr-default;
+        font-weight: 600;
+        font-size: 0.75rem;
+        line-height: 1.333333;
+
+        .container {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        &:hover {
+            box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
+            transform: scale(1.04);
+        }
+
+        @media (min-width: 744px) {
+            & {
+                font-size: 0.875rem;
+                line-height: 1.286;
+            }
+        }
+    }
 }

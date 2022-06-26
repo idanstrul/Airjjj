@@ -1,5 +1,4 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import { AppFooter } from "./cmps/AppFooter";
 import { MainHeader } from "./cmps/MainHeader";
 import { About } from "./pages/About";
 import { Home } from "./pages/Home";
@@ -22,7 +21,6 @@ function App() {
           <Route path="/stay/edit/:id" element={<StayEdit />} />
           <Route path="/counter-redux-exemple" element={<Counter />} />
         </Routes>
-        <AppFooter />
       </section>
     </Router>
   );

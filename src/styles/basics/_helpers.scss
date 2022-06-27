@@ -25,6 +25,10 @@
         justify-content: space-between;
     }
 
+    &.wrap {
+        flex-wrap: wrap;
+    }
+
     &-grow {
         flex-grow: 1;
     }
@@ -46,6 +50,10 @@
 
 .width-100pr {
     width: 100%;
+}
+
+.min-width-0 {
+    min-width: 0;
 }
 
 .clean-list {
@@ -77,6 +85,12 @@
 
     &xxs {
         font-size: 10px;
+    }
+
+    &overflow-with-dots {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     // &bold {

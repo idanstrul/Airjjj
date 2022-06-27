@@ -1,11 +1,14 @@
 .main-footer {
     border-top: 1px solid $border-clr-default;
     background-color: $background-clr-default;
-    min-height: 48px;
+    line-height: 20px;
+    gap: 22px;
 
     padding-top: 13px;
     padding-bottom: 14px;
     pointer-events: auto;
+
+    white-space: nowrap;
 
     button {
         background-color: transparent;

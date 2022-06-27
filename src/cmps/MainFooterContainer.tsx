@@ -16,17 +16,15 @@ export function MainFooterContainer() {
       </button>
     </div>
     <footer className='main-footer main-layout text-s flex space-between align-center'>
-      <div className='meta-links flex'>
+      <ul className='clean-list meta-links flex wrap'>
         <span className='copyright'>
           © 2022 Airjjj, Inc.
         </span>
-        <ul className='clean-list flex'>
-          <li><NavLink to="#">Privacy</NavLink></li>
-          <li><NavLink to="#">Terms</NavLink></li>
-          <li><NavLink to="#">Sitemap</NavLink></li>
-          <li><button className='hover-underline'>Destinations</button></li>
-        </ul>
-      </div>
+        <li><NavLink to="#">Privacy</NavLink></li>
+        <li><NavLink to="#">Terms</NavLink></li>
+        <li><NavLink to="#">Sitemap</NavLink></li>
+        <li><button className='hover-underline'>Destinations</button></li>
+      </ul>
       <div className='controls flex'>
         <button className='flex align-center'>
           <span>

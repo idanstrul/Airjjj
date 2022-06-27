@@ -1,0 +1,38 @@
+.main-footer {
+    border-top: 1px solid $border-clr-default;
+    background-color: $background-clr-default;
+    min-height: 48px;
+
+    padding-top: 13px;
+    padding-bottom: 14px;
+    pointer-events: auto;
+
+    button {
+        background-color: transparent;
+        border: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .meta-links {
+        li::before {
+            content: "∙";
+            display: inline-block;
+            text-align: center;
+            width: 19px;
+            font-size: 0.85rem;
+            line-height: 1.286;
+        }
+    }
+
+    .controls {
+        gap: 24px;
+        font-weight: 600;
+
+        button {
+            gap: 8px;
+        }
+    }
+}

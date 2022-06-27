@@ -9,6 +9,10 @@
         align-items: center;
     }
 
+    &.align-flex-end {
+        align-items: flex-end;
+    }
+
     &.justify-center {
         justify-content: center;
     }
@@ -79,4 +83,8 @@
     //     font-family: $font-family-for-bold;
     //     font-weight: 600;
     // }
+}
+
+.hover-underline:hover {
+    text-decoration: underline;
 }

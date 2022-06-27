@@ -17,29 +17,4 @@
             pointer-events: auto;
         }
     }
-
-    .main-footer {
-        border-top: 1px solid $border-clr-default;
-        background-color: $background-clr-default;
-
-        padding-top: 13px;
-        padding-bottom: 14px;
-        pointer-events: auto;
-
-        a:hover,
-        button:hover {
-            text-decoration: underline;
-        }
-
-        .meta-links {
-            li::before {
-                content: "∙";
-                display: inline-block;
-                text-align: center;
-                width: 19px;
-                font-size: 0.85rem;
-                line-height: 1.286;
-            }
-        }
-    }
 }

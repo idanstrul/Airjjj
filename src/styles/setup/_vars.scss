@@ -20,7 +20,7 @@ $box-shadow-default: 0 2px 4px rgba(0, 0, 0, 0.18);
 
 // VIEW BREAK POINTS:
 //exemple-remove:
-$desktop-s: 743px; //layout changes to mobile
+$desktop-s: 744px; //layout changes to mobile
 $desktop-m: 950px; //Search bar in main header gets adjasted to logo
 $desktop-l: 1128px; //Text in logo disappears and main layout padding changes to 40px
 $max-content-width: 1760px;
@@ -28,6 +28,7 @@ $max-content-width: 1760px;
 //OTHERS:
 
 $main-stay-list-grid-padding: 28px;
+$main-layout-padding-s: 24px;
 $main-layout-padding-m: 40px;
 $main-layout-padding-l: 80px;
 

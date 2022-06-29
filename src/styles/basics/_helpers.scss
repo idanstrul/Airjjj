@@ -62,6 +62,11 @@
     margin: 0;
 }
 
+button.clean-btn {
+    background: transparent;
+    border: none;
+}
+
 .text- {
     &center {
         text-align: center;
@@ -97,6 +102,10 @@
     //     font-family: $font-family-for-bold;
     //     font-weight: 600;
     // }
+}
+
+.white-space-no-wrap {
+    white-space: nowrap;
 }
 
 .hover-underline:hover {

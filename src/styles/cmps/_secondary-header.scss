@@ -73,7 +73,39 @@
                 gap: 8px;
                 padding-inline-start: 16px;
                 padding-inline-end: 16px;
+
+                svg {
+                    width: 14px;
+                }
             }
         }
+    }
+}
+
+.mobile-secondary-header {
+    // height: 98px;
+
+    .category-nav-bar {
+        min-width: 0;
+
+        .category-list {
+            // margin-inline-end: 20px;
+            scroll-behavior: smooth;
+            // padding-inline: 32px;
+            gap: 16px;
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: box-shadow 0.2s ease;
+        z-index: -1;
+        box-shadow: rgb(0 0 0 / 16%) 0 0 6px;
     }
 }

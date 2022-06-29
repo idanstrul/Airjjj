@@ -12,7 +12,7 @@ export function MainHeader() {
 
       <StaysFilter />
 
-      <div className="controls flex justify-flex-end">
+      <div className="controls flex justify-flex-end white-space-no-wrap">
         <NavLink to="#">
           <div className="container"> Become a Host</div>
         </NavLink>

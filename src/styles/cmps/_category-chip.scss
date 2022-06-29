@@ -6,24 +6,57 @@
         filter: contrast(calc(13 / 44));
     }
 
-    button:hover {
-        color: $font-clr-contrast;
+    button,
+    a {
+        &:hover,
+        &.active,
+        &:active {
+            color: $font-clr-contrast;
 
-        img {
-            filter: contrast(1);
+            img {
+                filter: contrast(1);
+            }
+
+            div.category-name::after {
+                opacity: 1;
+            }
         }
 
-        div.category-name::after {
-            opacity: 1;
+        &.active {
+            div.category-name::after {
+                background-color: $font-clr-contrast;
+            }
+
+            cursor: default;
+        }
+
+        &:active {
+            img {
+                transform: scale(0.96);
+            }
+
+            div.category-name {
+                span {
+                    transform: scale(0.96) translateY(-1px);
+                }
+            }
         }
     }
 
-    .category-list &:first-child button {
-        min-width: 38.8px;
+    .category-list &:first-child {
+        button,
+        a {
+            min-width: 38.8px;
+        }
     }
 
     div.category-name {
         position: relative;
+
+        span {
+            display: inline-block;
+            transition: transform 200ms ease;
+        }
 
         &::after {
             position: absolute;

@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export function CategoryChip({ category }: { category: string }) {
   var categoryNameFixed = category;
   if (category === "OMG") categoryNameFixed += "!";
@@ -5,7 +7,7 @@ export function CategoryChip({ category }: { category: string }) {
 
   return (
     <div className="category-chip">
-      <button>
+      <NavLink to="#">
         <img
           src={require(`../assets/airbnb.categoryChips/${category}.jpg`)}
           width="24"
@@ -14,7 +16,7 @@ export function CategoryChip({ category }: { category: string }) {
         <div className="category-name text-xs">
           <span>{categoryNameFixed}</span>
         </div>
-      </button>
+      </NavLink>
     </div>
   );
 }

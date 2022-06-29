@@ -2,9 +2,13 @@
     position: relative;
     min-height: 80px;
 
-    .controls,
-    .logo {
+    .controls {
         flex: 1 0 140px;
+    }
+    .logo {
+        @media (min-width: $desktop-m) {
+            flex: 1 0 140px;
+        }
     }
 
     &::after {
@@ -25,4 +29,9 @@
         left: 0;
         right: 0;
     }
+}
+
+.mobile-main-header {
+    padding-top: 14px;
+    background-color: $background-clr-default;
 }

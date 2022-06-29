@@ -41,6 +41,10 @@ img {
     span {
         height: 32px;
         line-height: 28px;
+
+        @media (max-width: calc($desktop-l - 1px)) {
+            display: none;
+        }
     }
 }
 
@@ -143,6 +147,11 @@ a {
         gap: 8px;
         min-width: 56px;
         align-items: center;
+
+        .mobile-secondary-header & {
+            gap: 4px;
+            min-width: 64px;
+        }
     }
 
     &.arrow-nav-btn {
@@ -192,4 +201,9 @@ a {
             }
         }
     }
+}
+
+.circle-btn {
+    border-radius: 50%;
+    border: 1px solid $border-clr-default;
 }

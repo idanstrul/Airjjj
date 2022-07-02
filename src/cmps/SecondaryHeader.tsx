@@ -3,7 +3,7 @@ import { CategoryFilterBtn } from "./CategoryFilterBtn";
 import { ArrowNavBtn } from "./ArrowNavBtn";
 import { useRef, useState } from "react";
 
-export function SecondaryHeader() {
+export const SecondaryHeader = () => {
   const categories = [
     "Islands",
     "Beach",

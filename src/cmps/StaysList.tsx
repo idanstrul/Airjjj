@@ -1,9 +1,7 @@
 import { StayPreview } from "./StayPreview";
 
-export function StaysList() {
-  return (
-    <section className="stays-list">
-      <StayPreview />
-    </section>
-  );
-}
+export const StaysList = () => (
+  <section className="stays-list">
+    <StayPreview />
+  </section>
+)

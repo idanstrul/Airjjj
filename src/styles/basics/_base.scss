@@ -172,11 +172,12 @@ a {
     &.map-btn {
         border-radius: 24px;
         outline: none;
-        padding: 14px 19px;
+        padding: 11px 19px;
         touch-action: manipulation;
         border-style: solid;
         border-width: 1px;
-        transition: transform 0.25s ease;
+        // transition: transform 0.25s ease;
+        transition: transform 0.2s ease-in-out 0s, opacity 0.15s linear 0s, visibility 0s ease 0s;
         background: $font-clr-primary;
         color: $background-clr-default;
         font-weight: 600;
@@ -194,11 +195,15 @@ a {
             transform: scale(1.04);
         }
 
-        @media (min-width: 744px) {
-            & {
-                font-size: 0.875rem;
-                line-height: 1.286;
-            }
+        &.hide {
+            transform: translate(0px, 20px);
+            opacity: 0;
+        }
+
+        @media (min-width: $desktop-s) {
+            font-size: 0.875rem;
+            line-height: 1.286;
+            padding: 14px 19px;
         }
     }
 }

@@ -1,6 +1,6 @@
 import { CategoryChip } from "./CategoryChip";
 
-export function MobileSecondaryHeader() {
+export const MobileSecondaryHeader = () => {
     const categories = [
         "Islands",
         "Beach",

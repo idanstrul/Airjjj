@@ -5,32 +5,31 @@ import { ReactComponent as IntlGlobeSVG } from "../assets/airbnb.icons/intl-glob
 import { ReactComponent as BurgerMenuSVG } from "../assets/airbnb.icons/burger-menu.svg";
 import { ReactComponent as UserAvatarDefaultSVG } from "../assets/airbnb.icons/user-avatar-default.svg";
 
-export function MainHeader() {
-  return (
-    <header className="main-header main-layout flex align-center text-s">
-      <BrandLogo />
+export const MainHeader = () => (
+  <header className="main-header main-layout flex align-center text-s">
+    <BrandLogo />
 
-      <StaysFilter />
+    <StaysFilter />
 
-      <div className="controls flex justify-flex-end white-space-no-wrap">
-        <NavLink to="#">
-          <div className="container"> Become a Host</div>
-        </NavLink>
+    <div className="controls flex justify-flex-end white-space-no-wrap">
+      <NavLink to="#">
+        <div className="container"> Become a Host</div>
+      </NavLink>
 
-        <button className="intl-btn">
-          <div className="container">
-            <IntlGlobeSVG />
-          </div>
-        </button>
+      <button className="intl-btn">
+        <div className="container">
+          <IntlGlobeSVG />
+        </div>
+      </button>
 
-        <button className="burger-menu-btn">
-          <BurgerMenuSVG />
-          <div className="container">
-            <UserAvatarDefaultSVG />
-          </div>
-        </button>
+      <button className="burger-menu-btn">
+        <BurgerMenuSVG />
+        <div className="container">
+          <UserAvatarDefaultSVG />
+        </div>
+      </button>
 
-        {/* <nav className="main-nav">
+      {/* <nav className="main-nav">
           <ul className="clean-list">
             <li>
               <NavLink end to="/">
@@ -53,7 +52,7 @@ export function MainHeader() {
             </li>
           </ul>
         </nav> */}
-      </div>
-    </header>
-  );
-}
+    </div>
+  </header>
+);
+

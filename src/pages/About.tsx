@@ -1,3 +1,3 @@
-export function About() {
-  return <main className="about-page">About</main>;
-}
+export const About = () =>
+  <main className="about-page">About</main>;
+

@@ -6,7 +6,7 @@ import { MobileMainHeader } from "../cmps/MobileMainHeader";
 import { MobileSecondaryHeader } from "../cmps/MobileSecondaryHeader";
 
 
-export function Home() {
+export const Home = () => {
   const desktopMinWidth = 744
   const [isDesktop, setDesktop] = useState(window.innerWidth >= desktopMinWidth)
 
@@ -27,7 +27,7 @@ export function Home() {
       {(isDesktop) ? <SecondaryHeader /> : <MobileSecondaryHeader />}
       <main className="home-page">
       </main>
-      <MainFooterContainer />
+      <MainFooterContainer isDesktop={isDesktop} />
     </>
   );
 }

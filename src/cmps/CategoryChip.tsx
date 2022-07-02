@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-export function CategoryChip({ category }: { category: string }) {
+export const CategoryChip = ({ category }: { category: string }) => {
   var categoryNameFixed = category;
   if (category === "OMG") categoryNameFixed += "!";
   if (category === "Ski-in out") categoryNameFixed = "Ski-in/out";
